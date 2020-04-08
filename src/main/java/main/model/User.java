@@ -3,6 +3,8 @@ package main.model;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import java.util.Collection;
 import java.util.Date;
 
 @Entity
@@ -22,6 +24,7 @@ public class User {
     @Column(nullable = false)
     private String name;
 
+    @Email
     @Column(nullable = false)
     private String email;
 
